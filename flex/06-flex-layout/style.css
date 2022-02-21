@@ -1,14 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+body, ul, .header, .content, .footer, .buttons {
+  display: flex;
+}
+
 body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  flex-direction: column;
+}
+
+.header {
+  margin: 15px;
+  justify-content: space-between;
+}
+
+.content {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.footer {
+  justify-content: space-between;
+  background-color: #eeeeee;
+  padding: 15px;
+  border-radius: 15px 15px 0px 0px;
 }
 
 img {
   width: 600px;
+}
+
+.buttons {
+  gap: 10px;
 }
 
 button {
@@ -16,6 +45,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 5px;
 }
 
 input {
@@ -24,4 +54,18 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+ul {
+  /* this removes the dots on the list items*/
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 15px;
+}
+
+a {
+  /* this removes the line under our links */
+  text-decoration: none;
+  color: rgb(90, 90, 90);
 }
